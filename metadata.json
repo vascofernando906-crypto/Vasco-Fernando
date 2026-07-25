@@ -1,0 +1,6 @@
+{
+  "name": "VONA MOÇAMBIQUE",
+  "description": "Soluções de Segurança Eletrónica Residencial e Corporativa em Moçambique",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
