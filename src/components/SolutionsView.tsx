@@ -110,6 +110,8 @@ export const SolutionsView: React.FC<SolutionsViewProps> = ({ onOpenQuoteModal }
               <img
                 src={selectedSolution.imageUrl}
                 alt={selectedSolution.title}
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover"
               />
             </div>

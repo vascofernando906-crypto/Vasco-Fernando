@@ -71,7 +71,9 @@ export const ProjectsView: React.FC<ProjectsViewProps> = ({ onOpenQuoteModal }) 
               >
                 <img
                   src={project.afterImageUrl}
-                  alt={project.title}
+                  alt={`Projeto ${project.title} em ${project.location}`}
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-slate-950/40 group-hover:bg-slate-950/20 transition-colors"></div>
@@ -177,7 +179,9 @@ export const ProjectsView: React.FC<ProjectsViewProps> = ({ onOpenQuoteModal }) 
             <div className="relative aspect-video bg-black flex items-center justify-center overflow-hidden">
               <img
                 src={activeModalProject.galleryImages[modalImageIndex]}
-                alt="Foto do projeto"
+                alt={`Foto ${modalImageIndex + 1} do projeto ${activeModalProject.title}`}
+                loading="lazy"
+                decoding="async"
                 className="max-h-full max-w-full object-contain"
               />
 

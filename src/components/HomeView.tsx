@@ -107,6 +107,8 @@ export const HomeView: React.FC<HomeViewProps> = ({ setActiveTab, onOpenQuoteMod
                   <img
                     src={activeCam.imageUrl}
                     alt={activeCam.name}
+                    loading="eager"
+                    decoding="async"
                     className="w-full h-full object-cover opacity-90 transition-all duration-500"
                   />
 
@@ -271,6 +273,8 @@ export const HomeView: React.FC<HomeViewProps> = ({ setActiveTab, onOpenQuoteMod
                   <img
                     src={sol.imageUrl}
                     alt={sol.title}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent"></div>
@@ -358,6 +362,8 @@ export const HomeView: React.FC<HomeViewProps> = ({ setActiveTab, onOpenQuoteMod
               <img
                 src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1000"
                 alt="Segurança Residencial VONA Moçambique"
+                loading="lazy"
+                decoding="async"
                 className="w-full h-80 lg:h-96 object-cover"
               />
               <div className="p-4 bg-slate-950 border-t border-slate-800 text-xs text-slate-300 flex items-center justify-between">
@@ -379,6 +385,8 @@ export const HomeView: React.FC<HomeViewProps> = ({ setActiveTab, onOpenQuoteMod
               <img
                 src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1000"
                 alt="Segurança Corporativa VONA Moçambique"
+                loading="lazy"
+                decoding="async"
                 className="w-full h-80 lg:h-96 object-cover"
               />
               <div className="p-4 bg-slate-950 border-t border-slate-800 text-xs text-slate-300 flex items-center justify-between">

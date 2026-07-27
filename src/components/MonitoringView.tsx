@@ -128,6 +128,8 @@ export const MonitoringView: React.FC<MonitoringViewProps> = ({ onOpenQuoteModal
             <img
               src={feed.imageUrl}
               alt={feed.name}
+              loading="eager"
+              decoding="async"
               className={`w-full h-full object-cover transition-all duration-700 ${
                 nightMode ? 'grayscale brightness-90 contrast-125' : ''
               } ${

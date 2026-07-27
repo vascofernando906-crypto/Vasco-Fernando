@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://vona-mo-ambique.vercel.app/sitemap.xml
