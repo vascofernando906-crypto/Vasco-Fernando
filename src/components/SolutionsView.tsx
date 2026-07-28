@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { SOLUTIONS_LIST } from '../data/constants';
 import { SecuritySolution } from '../types';
-import { Camera, Video, Globe, Cpu, HardDrive, ShieldCheck, FileText, Wrench, CheckCircle2, ArrowRight } from 'lucide-react';
+import { Camera, Video, Globe, Cpu, HardDrive, ShieldCheck, FileText, Wrench, CheckCircle2, ArrowRight, UserCheck } from 'lucide-react';
 
 interface SolutionsViewProps {
   onOpenQuoteModal: () => void;
@@ -12,6 +12,7 @@ export const SolutionsView: React.FC<SolutionsViewProps> = ({ onOpenQuoteModal }
 
   const getIcon = (name: string) => {
     switch (name) {
+      case 'UserCheck': return UserCheck;
       case 'Video': return Video;
       case 'Camera': return Camera;
       case 'Globe': return Globe;

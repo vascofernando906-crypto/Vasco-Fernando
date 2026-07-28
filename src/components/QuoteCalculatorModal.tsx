@@ -40,9 +40,10 @@ export const QuoteCalculatorModal: React.FC<QuoteCalculatorModalProps> = ({ isOp
   const serviceOptions = [
     'Câmeras de Segurança (IP / HD)',
     'Speed Dome / PTZ (Grandes Áreas)',
+    'Vigilância Presencial Permanente',
     'Gravação NVR / DVR',
     'Acesso e Visualização no Celular',
-    'Monitoramento Remoto / Presencial',
+    'Monitoramento Remoto 24 Horas',
     'Identificação de Pontos Cegos',
     'Manutenção & Assistência Técnica'
   ];

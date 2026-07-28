@@ -17,6 +17,29 @@ export const COMPANY_INFO = {
 
 export const SOLUTIONS_LIST: SecuritySolution[] = [
   {
+    id: 'vigilancia-presencial',
+    title: 'Vigilância Presencial Permanente',
+    subtitle: 'Proteção Física & Controlo de Acessos no Local',
+    description: 'Proteção presencial para residências, empresas, estabelecimentos comerciais, condomínios, armazéns, escritórios, obras e outros espaços que necessitem de vigilância contínua. Profissionais qualificados para salvaguarda patrimonial.',
+    iconName: 'UserCheck',
+    badge: 'Presencial & 24h',
+    imageUrl: 'https://images.unsplash.com/photo-1541888946425-d0fbb186a5b7?auto=format&fit=crop&q=80&w=800',
+    features: [
+      'Vigilância presencial contínua no local',
+      'Controlo de entrada e saída de pessoas e veículos',
+      'Controlo de acessos e verificação de identificação',
+      'Observação atenta das áreas protegidas',
+      'Registo rigoroso de ocorrências',
+      'Rondas no perímetro, quando previstas no contrato',
+      'Comunicação imediata de situações anormais',
+      'Vigilância de instalações e património',
+      'Integração total com sistemas CCTV',
+      'Coordenação com monitoramento remoto, quando contratado'
+    ],
+    specs: ['Escala 24/7 ou Personalizada', 'Registo Diário de Livro de Ponto', 'Comunicação via Rádio/Móvel', 'Atendimento de Emergência'],
+    idealFor: ['Empresas & Escritórios', 'Armazéns & Obras', 'Condomínios & Residências', 'Lojas & Estabelecimentos Comercial']
+  },
+  {
     id: 'bullet',
     title: 'Câmeras Bullet',
     subtitle: 'Proteção Perimetral & Fachadas',

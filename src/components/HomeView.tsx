@@ -4,7 +4,8 @@ import { COMPANY_INFO, SOLUTIONS_LIST, DEMO_CAMERA_FEEDS } from '../data/constan
 import { 
   Shield, Camera, Smartphone, Eye, Bell, PlayCircle, Globe, Sliders, 
   CheckCircle2, ArrowRight, MessageSquare, Phone, MapPin, Building, Home, 
-  Store, Wrench, ChevronRight, Lock, Zap, ShieldAlert
+  Store, Wrench, ChevronRight, Lock, Zap, ShieldAlert, UserCheck, Users,
+  CheckSquare, FileText, Activity, Radio, Layers, ShieldCheck
 } from 'lucide-react';
 
 interface HomeViewProps {
@@ -34,7 +35,7 @@ export const HomeView: React.FC<HomeViewProps> = ({ setActiveTab, onOpenQuoteMod
               
               <div className="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-sky-500/10 border border-sky-500/30 text-sky-400 text-xs font-bold tracking-wider uppercase">
                 <span className="w-2 h-2 rounded-full bg-sky-400 animate-pulse"></span>
-                <span>VONA MOÇAMBIQUE — Segurança Eletrónica</span>
+                <span>VONA MOÇAMBIQUE — Segurança Eletrónica & Presencial</span>
               </div>
 
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white font-display tracking-tight leading-[1.15]">
@@ -45,11 +46,11 @@ export const HomeView: React.FC<HomeViewProps> = ({ setActiveTab, onOpenQuoteMod
               </h1>
 
               <p className="text-lg font-semibold text-sky-200">
-                Soluções inteligentes de segurança residencial e corporativa.
+                Soluções inteligentes de segurança residencial e corporativa em Moçambique.
               </p>
 
               <p className="text-sm sm:text-base text-slate-300 max-w-2xl leading-relaxed">
-                Veja, acompanhe e proteja o seu património em tempo real, de onde quer que esteja. Câmeras IP, HD, Speed Dome PTZ, NVR/DVR e monitoramento remoto ao seu alcance.
+                Protegemos o seu imóvel com tecnologia de ponta e presença humana qualificada. Câmeras CCTV, monitoramento remoto 24h, vigilância presencial permanente e assistência técnica especializada.
               </p>
 
               {/* Action Buttons */}
@@ -121,7 +122,7 @@ export const HomeView: React.FC<HomeViewProps> = ({ setActiveTab, onOpenQuoteMod
                   </div>
 
                   <div className="absolute top-3 right-3 bg-slate-950/80 backdrop-blur px-2 py-1 rounded text-[10px] font-mono text-sky-400 border border-slate-800">
-                    2026-07-25 10:38:00
+                    2026-07-28 15:45:00
                   </div>
 
                   <div className="absolute bottom-3 left-3 bg-slate-950/90 backdrop-blur px-3 py-1.5 rounded-lg border border-slate-800">
@@ -152,6 +153,263 @@ export const HomeView: React.FC<HomeViewProps> = ({ setActiveTab, onOpenQuoteMod
             </div>
 
           </div>
+        </div>
+      </section>
+
+      {/* SECTION: NOSSOS SERVIÇOS (4 PRINCIPAIS CARTÕES) */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center max-w-3xl mx-auto space-y-3 mb-12">
+          <span className="text-xs font-bold text-sky-400 uppercase tracking-widest bg-sky-500/10 px-3 py-1 rounded-full border border-sky-500/20">
+            Principais Áreas de Atuação
+          </span>
+          <h2 className="text-2xl sm:text-3xl font-black text-white font-display">
+            NOSSOS SERVIÇOS
+          </h2>
+          <p className="text-sm font-semibold text-sky-300">
+            Proteção integrada para residências, comércio, indústrias e instituições.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {/* Service 01 */}
+          <div className="bg-slate-900 border border-slate-800 hover:border-sky-500/50 rounded-2xl p-6 flex flex-col justify-between transition-all hover:-translate-y-1 group">
+            <div className="space-y-4">
+              <div className="flex items-center justify-between">
+                <span className="text-2xl font-black text-sky-400 font-display">01</span>
+                <div className="p-2.5 rounded-xl bg-sky-500/10 border border-sky-500/30 text-sky-400 group-hover:bg-sky-500 group-hover:text-slate-950 transition-colors">
+                  <Camera className="w-5 h-5" />
+                </div>
+              </div>
+              <h3 className="text-lg font-bold text-white font-display">CÂMERAS CCTV</h3>
+              <p className="text-xs text-slate-300 leading-relaxed">
+                Montagem, instalação e configuração profissional de sistemas de videovigilância.
+              </p>
+            </div>
+            <div className="pt-6">
+              <button
+                onClick={() => setActiveTab('solucoes')}
+                className="w-full text-xs font-bold text-sky-400 hover:text-sky-300 flex items-center justify-between border-t border-slate-800 pt-3"
+              >
+                <span>VER DETALHES</span>
+                <ChevronRight className="w-4 h-4" />
+              </button>
+            </div>
+          </div>
+
+          {/* Service 02 */}
+          <div className="bg-slate-900 border border-slate-800 hover:border-sky-500/50 rounded-2xl p-6 flex flex-col justify-between transition-all hover:-translate-y-1 group">
+            <div className="space-y-4">
+              <div className="flex items-center justify-between">
+                <span className="text-2xl font-black text-sky-400 font-display">02</span>
+                <div className="p-2.5 rounded-xl bg-sky-500/10 border border-sky-500/30 text-sky-400 group-hover:bg-sky-500 group-hover:text-slate-950 transition-colors">
+                  <Eye className="w-5 h-5" />
+                </div>
+              </div>
+              <h3 className="text-lg font-bold text-white font-display">MONITORAMENTO 24 HORAS</h3>
+              <p className="text-xs text-slate-300 leading-relaxed">
+                Acompanhamento remoto das câmeras e sistemas de segurança conforme o serviço contratado.
+              </p>
+            </div>
+            <div className="pt-6">
+              <button
+                onClick={() => setActiveTab('monitoramento')}
+                className="w-full text-xs font-bold text-sky-400 hover:text-sky-300 flex items-center justify-between border-t border-slate-800 pt-3"
+              >
+                <span>VER DEMONSTRAÇÃO</span>
+                <ChevronRight className="w-4 h-4" />
+              </button>
+            </div>
+          </div>
+
+          {/* Service 03 */}
+          <div className="bg-slate-900 border border-sky-500/40 rounded-2xl p-6 flex flex-col justify-between transition-all hover:-translate-y-1 group relative overflow-hidden tech-glow">
+            <div className="absolute top-0 right-0 bg-sky-500 text-slate-950 text-[9px] font-black uppercase px-2.5 py-0.5 rounded-bl-lg">
+              Novo Serviço
+            </div>
+            <div className="space-y-4">
+              <div className="flex items-center justify-between">
+                <span className="text-2xl font-black text-sky-400 font-display">03</span>
+                <div className="p-2.5 rounded-xl bg-sky-500/20 border border-sky-400 text-sky-300 group-hover:bg-sky-500 group-hover:text-slate-950 transition-colors">
+                  <UserCheck className="w-5 h-5" />
+                </div>
+              </div>
+              <h3 className="text-lg font-bold text-white font-display">VIGILÂNCIA PRESENCIAL</h3>
+              <p className="text-xs text-slate-300 leading-relaxed">
+                Profissionais de segurança presentes no local para vigilância e controlo de acessos, de acordo com o contrato.
+              </p>
+            </div>
+            <div className="pt-6">
+              <button
+                onClick={onOpenQuoteModal}
+                className="w-full text-xs font-bold text-sky-400 hover:text-sky-300 flex items-center justify-between border-t border-slate-800 pt-3"
+              >
+                <span>SOLICITAR SERVIÇO</span>
+                <ChevronRight className="w-4 h-4" />
+              </button>
+            </div>
+          </div>
+
+          {/* Service 04 */}
+          <div className="bg-slate-900 border border-slate-800 hover:border-sky-500/50 rounded-2xl p-6 flex flex-col justify-between transition-all hover:-translate-y-1 group">
+            <div className="space-y-4">
+              <div className="flex items-center justify-between">
+                <span className="text-2xl font-black text-sky-400 font-display">04</span>
+                <div className="p-2.5 rounded-xl bg-sky-500/10 border border-sky-500/30 text-sky-400 group-hover:bg-sky-500 group-hover:text-slate-950 transition-colors">
+                  <Wrench className="w-5 h-5" />
+                </div>
+              </div>
+              <h3 className="text-lg font-bold text-white font-display">MANUTENÇÃO E ASSISTÊNCIA TÉCNICA</h3>
+              <p className="text-xs text-slate-300 leading-relaxed">
+                Manutenção preventiva, diagnóstico de avarias, configuração e assistência técnica dos sistemas de segurança.
+              </p>
+            </div>
+            <div className="pt-6">
+              <button
+                onClick={onOpenQuoteModal}
+                className="w-full text-xs font-bold text-sky-400 hover:text-sky-300 flex items-center justify-between border-t border-slate-800 pt-3"
+              >
+                <span>SOLICITAR SUPORTE</span>
+                <ChevronRight className="w-4 h-4" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* DETAILED SECTION: VIGILÂNCIA PRESENCIAL PERMANENTE */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900 rounded-3xl p-8 sm:p-12 border border-sky-500/30 shadow-2xl relative overflow-hidden">
+          
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            
+            {/* Left Column: Image & Badges */}
+            <div className="lg:col-span-5 relative order-2 lg:order-1">
+              <div className="relative rounded-2xl overflow-hidden border border-sky-500/40 shadow-2xl">
+                <img
+                  src="https://images.unsplash.com/photo-1541888946425-d0fbb186a5b7?auto=format&fit=crop&q=80&w=1000"
+                  alt="Vigilância Presencial Permanente em Moçambique — VONA Moçambique"
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-80 sm:h-96 object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+                <div className="absolute bottom-4 left-4 right-4 p-4 bg-slate-950/90 backdrop-blur rounded-xl border border-slate-800 text-xs">
+                  <div className="flex items-center space-x-2 text-sky-400 font-bold mb-1">
+                    <UserCheck className="w-4 h-4" />
+                    <span>PROFISSIONAIS NO LOCAL</span>
+                  </div>
+                  <p className="text-slate-300 text-[11px]">
+                    Presença humana qualificada para residências, condomínios, empresas e estabelecimentos comerciais em Moçambique.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Column: Text and 10 Services List */}
+            <div className="lg:col-span-7 space-y-6 order-1 lg:order-2">
+              
+              <div className="inline-flex items-center space-x-2 text-xs font-bold text-sky-400 uppercase tracking-widest bg-sky-500/10 px-3 py-1 rounded-full border border-sky-500/20">
+                <Users className="w-3.5 h-3.5" />
+                <span>Proteção Presencial & Patrimonial</span>
+              </div>
+
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white font-display">
+                Vigilância Presencial Permanente
+              </h2>
+
+              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed bg-slate-950/60 p-4 rounded-xl border border-slate-800">
+                Proteção presencial para residências, empresas, estabelecimentos comerciais, condomínios, armazéns, escritórios, obras e outros espaços que necessitem de vigilância contínua.
+                <br /><br />
+                A VONA Moçambique disponibiliza profissionais para realizar vigilância presencial no local, controlo de acessos, observação das áreas protegidas, registo de ocorrências e comunicação de situações anormais, de acordo com as condições estabelecidas no contrato.
+              </p>
+
+              {/* 10 Services Checklist Grid */}
+              <div className="space-y-2">
+                <h3 className="text-xs font-bold text-sky-400 uppercase tracking-wider">
+                  Serviços Incluídos na Vigilância Presencial:
+                </h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-200">
+                  {[
+                    'Vigilância presencial contínua',
+                    'Controlo de entrada e saída',
+                    'Controlo de acessos',
+                    'Observação das áreas protegidas',
+                    'Registo de ocorrências',
+                    'Rondas no perímetro, quando previstas no contrato',
+                    'Comunicação de situações anormais',
+                    'Vigilância de instalações',
+                    'Integração com sistemas CCTV',
+                    'Coordenação com monitoramento remoto, quando contratado'
+                  ].map((serviceItem, idx) => (
+                    <div key={idx} className="flex items-start space-x-2 bg-slate-950/80 p-2.5 rounded-lg border border-slate-800/80">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                      <span className="font-medium text-slate-200">{serviceItem}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="pt-2 flex flex-col sm:flex-row items-center gap-3">
+                <button
+                  onClick={onOpenQuoteModal}
+                  className="w-full sm:w-auto bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold text-xs uppercase px-6 py-3.5 rounded-xl shadow-lg shadow-sky-500/20 cursor-pointer flex items-center justify-center space-x-2"
+                >
+                  <span>SOLICITAR ORÇAMENTO DE VIGILÂNCIA</span>
+                  <ArrowRight className="w-4 h-4" />
+                </button>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      {/* HIGHLIGHT SECTION: SEGURANÇA COMPLETA PARA O SEU ESPAÇO */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="bg-gradient-to-r from-sky-950 via-slate-900 to-blue-950 rounded-3xl p-8 sm:p-12 border border-sky-500/40 text-center space-y-6 tech-glow-lg">
+          
+          <div className="max-w-3xl mx-auto space-y-3">
+            <span className="text-xs font-bold text-sky-400 uppercase tracking-widest bg-sky-500/10 px-3 py-1.5 rounded-full border border-sky-500/30">
+              Solução Integrada de Alta Proteção
+            </span>
+
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white font-display uppercase tracking-tight">
+              SEGURANÇA COMPLETA PARA O SEU ESPAÇO
+            </h2>
+
+            <p className="text-sm sm:text-base font-semibold text-sky-200 max-w-2xl mx-auto">
+              Tecnologia e presença humana trabalhando juntas para proporcionar uma solução de segurança mais completa.
+            </p>
+          </div>
+
+          {/* Highlights pills */}
+          <div className="flex flex-wrap items-center justify-center gap-2 max-w-4xl mx-auto py-2">
+            {[
+              'CCTV',
+              'MONITORAMENTO 24H',
+              'VIGILÂNCIA PRESENCIAL',
+              'ASSISTÊNCIA TÉCNICA'
+            ].map((highlight, idx) => (
+              <React.Fragment key={idx}>
+                <div className="bg-slate-950 border border-sky-400/40 px-4 py-2 rounded-xl text-xs sm:text-sm font-black text-white tracking-wide shadow-md">
+                  {highlight}
+                </div>
+                {idx < 3 && <span className="text-sky-400 font-black text-sm hidden sm:inline">+</span>}
+              </React.Fragment>
+            ))}
+          </div>
+
+          <div className="pt-2">
+            <button
+              onClick={onOpenQuoteModal}
+              className="bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold text-xs uppercase px-8 py-4 rounded-xl shadow-xl shadow-sky-500/25 cursor-pointer transition-all hover:scale-102"
+            >
+              SOLICITAR ORÇAMENTO
+            </button>
+          </div>
+
         </div>
       </section>
 
@@ -248,21 +506,21 @@ export const HomeView: React.FC<HomeViewProps> = ({ setActiveTab, onOpenQuoteMod
         </div>
       </section>
 
-      {/* SECTION: NOSSAS SOLUÇÕES */}
+      {/* SECTION: CATALOGO COMPLETO DE EQUIPAMENTOS */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto space-y-3 mb-12">
           <span className="text-xs font-bold text-sky-400 uppercase tracking-widest bg-sky-500/10 px-3 py-1 rounded-full border border-sky-500/20">
-            Catálogo de Equipamentos e Serviços
+            Catálogo de Equipamentos e Soluções
           </span>
           <h2 className="text-2xl sm:text-3xl font-black text-white font-display">
-            NOSSAS SOLUÇÕES DE SEGURANÇA
+            TODAS AS NOSSAS SOLUÇÕES
           </h2>
           <p className="text-sm font-semibold text-sky-300">
             Tecnologia, proteção e controlo para o seu património.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {SOLUTIONS_LIST.map((sol) => (
             <div
               key={sol.id}
@@ -328,13 +586,13 @@ export const HomeView: React.FC<HomeViewProps> = ({ setActiveTab, onOpenQuoteMod
             </p>
 
             <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-              Tenha maior tranquilidade sabendo que pode acompanhar a sua residência mesmo quando estiver longe. Protegemos vivendas, condomínios fechados, apartamentos e propriedades rurais.
+              Tenha maior tranquilidade sabendo que pode acompanhar a sua residência mesmo quando estiver longe. Protegemos vivendas, condomínios fechados, apartamentos e propriedades rurais em Moçambique.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs text-slate-200 pt-2">
               {[
                 'Monitoramento remoto no celular',
-                'Visualização pelo smartphone',
+                'Vigilância presencial para condomínios',
                 'Proteção de entradas & portões',
                 'Proteção de muros & perímetros',
                 'Gravação contínua de imagens',
@@ -390,7 +648,7 @@ export const HomeView: React.FC<HomeViewProps> = ({ setActiveTab, onOpenQuoteMod
                 className="w-full h-80 lg:h-96 object-cover"
               />
               <div className="p-4 bg-slate-950 border-t border-slate-800 text-xs text-slate-300 flex items-center justify-between">
-                <span>Proteção para Escritórios, Lojas e Armazéns</span>
+                <span>Proteção para Escritórios, Lojas, Obras e Armazéns</span>
                 <span className="text-sky-400 font-bold">VONA CORPORATIVO</span>
               </div>
             </div>
@@ -407,13 +665,13 @@ export const HomeView: React.FC<HomeViewProps> = ({ setActiveTab, onOpenQuoteMod
             </h2>
 
             <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-              Proteja pessoas, equipamentos, mercadorias e património com soluções profissionais de segurança eletrónica. Reduza riscos operacionais e acompanhe todas as operações em tempo real.
+              Proteja pessoas, equipamentos, mercadorias e património com soluções profissionais de segurança eletrónica e vigilância presencial. Reduza riscos operacionais e garanta o controlo total de acessos ao seu negócio.
             </p>
 
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center text-xs">
               {[
                 'Escritórios', 'Lojas', 'Armazéns', 'Fábricas',
-                'Escolas', 'Clínicas', 'Instituições', 'Propriedades'
+                'Escolas', 'Clínicas', 'Instituições', 'Obras & Estaleiros'
               ].map((item, idx) => (
                 <div key={idx} className="bg-slate-950 p-3 rounded-xl border border-slate-800 font-semibold text-white">
                   {item}
@@ -446,7 +704,7 @@ export const HomeView: React.FC<HomeViewProps> = ({ setActiveTab, onOpenQuoteMod
               VISITA TÉCNICA ESPECIALIZADA
             </h2>
             <p className="text-xs sm:text-sm text-slate-300">
-              Antes da instalação, analisamos o local para identificar pontos cegos, áreas vulneráveis e as melhores posições para instalação das câmeras.
+              Antes da instalação ou colocação de segurança presencial, analisamos o local para identificar pontos cegos, áreas vulneráveis e dimensionar a proteção ideal.
             </p>
           </div>
 
@@ -478,7 +736,7 @@ export const HomeView: React.FC<HomeViewProps> = ({ setActiveTab, onOpenQuoteMod
           <h2 className="text-2xl sm:text-3xl font-black text-white font-display">
             POR QUE ESCOLHER A VONA MOÇAMBIQUE?
           </h2>
-          <p className="text-xs sm:text-sm text-slate-400">Diferenciais que garantem a segurança e a tranquilidade do seu imóvel.</p>
+          <p className="text-xs sm:text-sm text-slate-400">Diferenciais que garantem a segurança e a tranquilidade do seu imóvel em todo o país.</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -486,6 +744,10 @@ export const HomeView: React.FC<HomeViewProps> = ({ setActiveTab, onOpenQuoteMod
             {
               title: 'ACESSO INSTANTÂNEO',
               desc: 'Veja as suas câmeras em tempo real pelo celular de onde quer que esteja.'
+            },
+            {
+              title: 'VIGILÂNCIA PRESENCIAL',
+              desc: 'Segurança presencial contínua e controlo rigoroso de acessos para proteger o seu património.'
             },
             {
               title: 'VISITA TÉCNICA',
@@ -501,11 +763,7 @@ export const HomeView: React.FC<HomeViewProps> = ({ setActiveTab, onOpenQuoteMod
             },
             {
               title: 'SOLUÇÕES PERSONALIZADAS',
-              desc: 'Cada projeto é desenvolvido especificamente de acordo com o imóvel.'
-            },
-            {
-              title: 'TECNOLOGIA',
-              desc: 'Soluções modernas com tecnologia IP e analógica HD para uma segurança inteligente.'
+              desc: 'Tecnologia de ponta e presença humana integradas em um só projeto.'
             },
           ].map((item, i) => (
             <div key={i} className="bg-slate-900/70 p-6 rounded-2xl border border-slate-800 hover:border-sky-500/30 transition-all">
@@ -532,7 +790,7 @@ export const HomeView: React.FC<HomeViewProps> = ({ setActiveTab, onOpenQuoteMod
           </p>
 
           <p className="text-xs sm:text-sm text-slate-300 max-w-xl mx-auto leading-relaxed">
-            Solicite uma avaliação e descubra a solução de segurança ideal para o seu imóvel residencial ou comercial.
+            Solicite uma avaliação e descubra a solução de segurança ideal para o seu imóvel residencial ou comercial em Moçambique.
           </p>
 
           <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-4">
