@@ -12,15 +12,7 @@ export const AboutView: React.FC<AboutViewProps> = ({ onOpenQuoteModal, onOpenPr
     <div className="space-y-16 pb-16">
       
       {/* Page Header */}
-      <section className="text-center space-y-4 pt-6 max-w-3xl mx-auto flex flex-col items-center">
-        <div className="relative group">
-          <img 
-            src="/vona-logo.png" 
-            alt="Logótipo Oficial VONA Moçambique" 
-            className="w-24 h-24 sm:w-28 sm:h-28 object-contain rounded-full border-2 border-sky-500/40 shadow-2xl shadow-sky-500/20 bg-slate-950 p-1"
-          />
-        </div>
-
+      <section className="text-center space-y-3 pt-6 max-w-3xl mx-auto">
         <span className="text-xs font-bold text-sky-400 uppercase tracking-widest bg-sky-500/10 px-3 py-1 rounded-full border border-sky-500/20">
           Institucional
         </span>

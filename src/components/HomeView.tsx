@@ -33,16 +33,9 @@ export const HomeView: React.FC<HomeViewProps> = ({ setActiveTab, onOpenQuoteMod
             {/* Left Column: Typography & CTAs */}
             <div className="lg:col-span-7 space-y-6 text-left">
               
-              <div className="flex items-center space-x-3">
-                <img 
-                  src="/vona-logo.png" 
-                  alt="Logótipo Oficial VONA Moçambique" 
-                  className="w-12 h-12 sm:w-14 sm:h-14 object-contain rounded-full border border-sky-500/40 shadow-xl shadow-sky-500/20 bg-slate-950 shrink-0"
-                />
-                <div className="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-sky-500/10 border border-sky-500/30 text-sky-400 text-xs font-bold tracking-wider uppercase">
-                  <span className="w-2 h-2 rounded-full bg-sky-400 animate-pulse"></span>
-                  <span>VONA MOÇAMBIQUE — Segurança Eletrónica & Presencial</span>
-                </div>
+              <div className="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-sky-500/10 border border-sky-500/30 text-sky-400 text-xs font-bold tracking-wider uppercase">
+                <span className="w-2 h-2 rounded-full bg-sky-400 animate-pulse"></span>
+                <span>VONA MOÇAMBIQUE — Segurança Eletrónica & Presencial</span>
               </div>
 
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white font-display tracking-tight leading-[1.15]">

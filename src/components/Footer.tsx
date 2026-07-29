@@ -22,11 +22,9 @@ export const Footer: React.FC<FooterProps> = ({ setActiveTab, onOpenPrivacyModal
           {/* Column 1: Company Profile */}
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
-              <img 
-                src="/vona-logo.png" 
-                alt="Logótipo VONA Moçambique" 
-                className="w-10 h-10 object-contain rounded-full border border-sky-500/40 bg-slate-900 shrink-0"
-              />
+              <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-slate-900 border border-sky-500/40 text-sky-400">
+                <Shield className="w-5 h-5" />
+              </div>
               <div>
                 <span className="text-xl font-black text-white font-display tracking-tight">VONA</span>
                 <span className="ml-1 text-[11px] font-bold text-sky-400 bg-sky-500/10 px-1.5 py-0.5 rounded border border-sky-500/30">MOÇAMBIQUE</span>
@@ -34,7 +32,7 @@ export const Footer: React.FC<FooterProps> = ({ setActiveTab, onOpenPrivacyModal
             </div>
 
             <p className="text-xs text-slate-400 leading-relaxed">
-              Empresa especializada em soluções completas de segurança eletrónica e vigilância presencial residencial, comercial e corporativa em Moçambique.
+              Empresa especializada em soluções completas de segurança eletrónica residencial, comercial, corporativa e institucional em Moçambique.
             </p>
 
             <div className="pt-2 space-y-2">
@@ -87,15 +85,7 @@ export const Footer: React.FC<FooterProps> = ({ setActiveTab, onOpenPrivacyModal
               </li>
               <li className="flex items-center space-x-2">
                 <Shield className="w-3.5 h-3.5 text-sky-400" />
-                <span>Monitoramento Remoto 24 Horas</span>
-              </li>
-              <li className="flex items-center space-x-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-sky-400"></span>
-                <span>Vigilância Presencial Permanente</span>
-              </li>
-              <li className="flex items-center space-x-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-sky-400"></span>
-                <span>Controlo de Acessos & Rondas</span>
+                <span>Monitoramento Remoto no Celular</span>
               </li>
               <li className="flex items-center space-x-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-sky-400"></span>
@@ -108,6 +98,14 @@ export const Footer: React.FC<FooterProps> = ({ setActiveTab, onOpenPrivacyModal
               <li className="flex items-center space-x-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-sky-400"></span>
                 <span>Manutenção & Assistência Técnica</span>
+              </li>
+              <li className="flex items-center space-x-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-sky-400"></span>
+                <span>Segurança Residencial</span>
+              </li>
+              <li className="flex items-center space-x-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-sky-400"></span>
+                <span>Segurança Corporativa</span>
               </li>
             </ul>
           </div>
