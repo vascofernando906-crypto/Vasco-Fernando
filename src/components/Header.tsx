@@ -77,18 +77,20 @@ export const Header: React.FC<HeaderProps> = ({ activeTab, setActiveTab, onOpenQ
           <button 
             onClick={() => handleNavClick('inicio')} 
             className="flex items-center space-x-3 group text-left focus:outline-none"
+            aria-label="VONA Moçambique - Ir para início"
           >
-            <div className="relative flex items-center justify-center w-11 h-11 rounded-xl bg-gradient-to-br from-slate-900 via-slate-800 to-sky-950 border border-sky-500/40 shadow-md group-hover:border-sky-400 transition-all">
-              <Shield className="w-6 h-6 text-sky-400 group-hover:scale-105 transition-transform" />
-              <Camera className="w-3.5 h-3.5 text-white absolute bottom-2 right-2" />
-            </div>
+            <img 
+              src="/vona-logo.png" 
+              alt="Logótipo Oficial VONA Moçambique" 
+              className="w-11 h-11 sm:w-12 sm:h-12 object-contain rounded-full border border-sky-500/40 shadow-lg shadow-sky-500/10 group-hover:border-sky-400 group-hover:scale-105 transition-all shrink-0 bg-slate-950"
+            />
             <div>
               <div className="flex items-center space-x-1">
-                <span className="text-2xl font-extrabold tracking-tight text-white font-display">VONA</span>
-                <span className="text-xs font-semibold px-1.5 py-0.5 rounded bg-sky-500/20 text-sky-400 border border-sky-500/30">MOÇAMBIQUE</span>
+                <span className="text-xl sm:text-2xl font-black tracking-tight text-white font-display">VONA</span>
+                <span className="text-[10px] sm:text-xs font-bold px-1.5 py-0.5 rounded bg-sky-500/20 text-sky-400 border border-sky-500/30">MOÇAMBIQUE</span>
               </div>
-              <p className="text-[10px] tracking-wider text-slate-400 font-medium uppercase">
-                Segurança Eletrónica
+              <p className="text-[10px] tracking-wider text-slate-400 font-semibold uppercase">
+                Segurança Eletrónica & Presencial
               </p>
             </div>
           </button>
@@ -142,7 +144,24 @@ export const Header: React.FC<HeaderProps> = ({ activeTab, setActiveTab, onOpenQ
 
       {/* Mobile Drawer Navigation */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-slate-950 border-b border-slate-800 px-4 pt-3 pb-6 space-y-3 animate-in slide-in-from-top-2 duration-200">
+        <div className="lg:hidden bg-slate-950 border-b border-slate-800 px-4 pt-4 pb-6 space-y-4 animate-in slide-in-from-top-2 duration-200">
+          
+          {/* Mobile Drawer Brand Header */}
+          <div className="flex items-center space-x-3 pb-3 border-b border-slate-800">
+            <img 
+              src="/vona-logo.png" 
+              alt="Logótipo VONA Moçambique" 
+              className="w-10 h-10 object-contain rounded-full border border-sky-500/40 shrink-0 bg-slate-900"
+            />
+            <div>
+              <div className="flex items-center space-x-1">
+                <span className="text-lg font-black text-white font-display">VONA</span>
+                <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-sky-500/20 text-sky-400 border border-sky-500/30">MOÇAMBIQUE</span>
+              </div>
+              <p className="text-[9px] text-slate-400 uppercase font-semibold">Segurança Eletrónica & Presencial</p>
+            </div>
+          </div>
+
           <div className="space-y-1">
             {navItems.map((item) => (
               <button
