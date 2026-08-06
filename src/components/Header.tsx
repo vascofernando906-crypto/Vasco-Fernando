@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { TabType } from '../types';
 import { COMPANY_INFO } from '../data/constants';
-import { Shield, Phone, Facebook, Menu, X, Camera, MessageSquare, ChevronRight } from 'lucide-react';
+import { Shield, Phone, Facebook, Instagram, Menu, X, Camera, MessageSquare, ChevronRight } from 'lucide-react';
 
 interface HeaderProps {
   activeTab: TabType;
@@ -46,15 +46,26 @@ export const Header: React.FC<HeaderProps> = ({ activeTab, setActiveTab, onOpenQ
             </span>
           </div>
 
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-3">
             <a
               href={COMPANY_INFO.facebookUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center space-x-1.5 bg-blue-900/40 hover:bg-blue-800/60 text-blue-300 hover:text-white px-2.5 py-0.5 rounded border border-blue-700/40 transition-colors"
+              title="Página Oficial do Facebook"
             >
               <Facebook className="w-3.5 h-3.5" />
               <span className="font-semibold text-[11px]">{COMPANY_INFO.facebookButtonText}</span>
+            </a>
+            <a
+              href={COMPANY_INFO.instagramUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center space-x-1.5 bg-pink-950/40 hover:bg-pink-900/60 text-pink-300 hover:text-white px-2.5 py-0.5 rounded border border-pink-700/40 transition-colors"
+              title="Página Oficial do Instagram"
+            >
+              <Instagram className="w-3.5 h-3.5 text-pink-400" />
+              <span className="font-semibold text-[11px]">{COMPANY_INFO.instagramButtonText}</span>
             </a>
             <a
               href={COMPANY_INFO.whatsappUrl}
@@ -77,18 +88,20 @@ export const Header: React.FC<HeaderProps> = ({ activeTab, setActiveTab, onOpenQ
           <button 
             onClick={() => handleNavClick('inicio')} 
             className="flex items-center space-x-3 group text-left focus:outline-none"
+            aria-label="VONA Moçambique - Ir para início"
           >
-            <div className="relative flex items-center justify-center w-11 h-11 rounded-xl bg-gradient-to-br from-slate-900 via-slate-800 to-sky-950 border border-sky-500/40 shadow-md group-hover:border-sky-400 transition-all">
-              <Shield className="w-6 h-6 text-sky-400 group-hover:scale-105 transition-transform" />
-              <Camera className="w-3.5 h-3.5 text-white absolute bottom-2 right-2" />
-            </div>
+            <img 
+              src="/vona-logo.png" 
+              alt="Logótipo Oficial VONA Moçambique" 
+              className="w-11 h-11 sm:w-12 sm:h-12 object-contain rounded-full border border-sky-500/40 shadow-lg shadow-sky-500/10 group-hover:border-sky-400 group-hover:scale-105 transition-all shrink-0 bg-slate-950"
+            />
             <div>
               <div className="flex items-center space-x-1">
-                <span className="text-2xl font-extrabold tracking-tight text-white font-display">VONA</span>
-                <span className="text-xs font-semibold px-1.5 py-0.5 rounded bg-sky-500/20 text-sky-400 border border-sky-500/30">MOÇAMBIQUE</span>
+                <span className="text-xl sm:text-2xl font-black tracking-tight text-white font-display">VONA</span>
+                <span className="text-[10px] sm:text-xs font-bold px-1.5 py-0.5 rounded bg-sky-500/20 text-sky-400 border border-sky-500/30">MOÇAMBIQUE</span>
               </div>
-              <p className="text-[10px] tracking-wider text-slate-400 font-medium uppercase">
-                Segurança Eletrónica
+              <p className="text-[10px] tracking-wider text-slate-400 font-semibold uppercase">
+                Segurança Eletrónica & Presencial
               </p>
             </div>
           </button>
@@ -142,7 +155,24 @@ export const Header: React.FC<HeaderProps> = ({ activeTab, setActiveTab, onOpenQ
 
       {/* Mobile Drawer Navigation */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-slate-950 border-b border-slate-800 px-4 pt-3 pb-6 space-y-3 animate-in slide-in-from-top-2 duration-200">
+        <div className="lg:hidden bg-slate-950 border-b border-slate-800 px-4 pt-4 pb-6 space-y-4 animate-in slide-in-from-top-2 duration-200">
+          
+          {/* Mobile Drawer Brand Header */}
+          <div className="flex items-center space-x-3 pb-3 border-b border-slate-800">
+            <img 
+              src="/vona-logo.png" 
+              alt="Logótipo VONA Moçambique" 
+              className="w-10 h-10 object-contain rounded-full border border-sky-500/40 shrink-0 bg-slate-900"
+            />
+            <div>
+              <div className="flex items-center space-x-1">
+                <span className="text-lg font-black text-white font-display">VONA</span>
+                <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-sky-500/20 text-sky-400 border border-sky-500/30">MOÇAMBIQUE</span>
+              </div>
+              <p className="text-[9px] text-slate-400 uppercase font-semibold">Segurança Eletrónica & Presencial</p>
+            </div>
+          </div>
+
           <div className="space-y-1">
             {navItems.map((item) => (
               <button
@@ -171,15 +201,27 @@ export const Header: React.FC<HeaderProps> = ({ activeTab, setActiveTab, onOpenQ
               SOLICITAR ORÇAMENTO
             </button>
 
-            <a
-              href={COMPANY_INFO.facebookUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full flex items-center justify-center space-x-2 bg-blue-900/50 text-blue-200 py-2.5 rounded-lg border border-blue-700/50 text-xs font-bold"
-            >
-              <Facebook className="w-4 h-4 text-blue-400" />
-              <span>{COMPANY_INFO.facebookButtonText}</span>
-            </a>
+            <div className="grid grid-cols-2 gap-2">
+              <a
+                href={COMPANY_INFO.facebookUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center space-x-2 bg-blue-900/50 hover:bg-blue-800/70 text-blue-200 py-2.5 rounded-lg border border-blue-700/50 text-xs font-bold transition-colors"
+              >
+                <Facebook className="w-4 h-4 text-blue-400" />
+                <span>Facebook</span>
+              </a>
+
+              <a
+                href={COMPANY_INFO.instagramUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center space-x-2 bg-pink-950/50 hover:bg-pink-900/70 text-pink-200 py-2.5 rounded-lg border border-pink-700/50 text-xs font-bold transition-colors"
+              >
+                <Instagram className="w-4 h-4 text-pink-400" />
+                <span>Instagram</span>
+              </a>
+            </div>
 
             <a
               href={`tel:${COMPANY_INFO.phoneRaw}`}

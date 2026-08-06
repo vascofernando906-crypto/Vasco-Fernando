@@ -1,7 +1,7 @@
 import React from 'react';
 import { TabType } from '../types';
 import { COMPANY_INFO } from '../data/constants';
-import { Shield, Camera, Phone, Facebook, MessageSquare, ArrowUpRight, Lock } from 'lucide-react';
+import { Shield, Camera, Phone, Facebook, Instagram, MessageSquare, ArrowUpRight, Lock } from 'lucide-react';
 
 interface FooterProps {
   setActiveTab: (tab: TabType) => void;
@@ -22,9 +22,11 @@ export const Footer: React.FC<FooterProps> = ({ setActiveTab, onOpenPrivacyModal
           {/* Column 1: Company Profile */}
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
-              <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-slate-900 border border-sky-500/40 text-sky-400">
-                <Shield className="w-5 h-5" />
-              </div>
+              <img 
+                src="/vona-logo.png" 
+                alt="Logótipo VONA Moçambique" 
+                className="w-10 h-10 object-contain rounded-full border border-sky-500/40 bg-slate-900 shrink-0"
+              />
               <div>
                 <span className="text-xl font-black text-white font-display tracking-tight">VONA</span>
                 <span className="ml-1 text-[11px] font-bold text-sky-400 bg-sky-500/10 px-1.5 py-0.5 rounded border border-sky-500/30">MOÇAMBIQUE</span>
@@ -32,7 +34,7 @@ export const Footer: React.FC<FooterProps> = ({ setActiveTab, onOpenPrivacyModal
             </div>
 
             <p className="text-xs text-slate-400 leading-relaxed">
-              Empresa especializada em soluções completas de segurança eletrónica residencial, comercial, corporativa e institucional em Moçambique.
+              Empresa especializada em soluções completas de segurança eletrónica e vigilância presencial residencial, comercial e corporativa em Moçambique.
             </p>
 
             <div className="pt-2 space-y-2">
@@ -85,7 +87,15 @@ export const Footer: React.FC<FooterProps> = ({ setActiveTab, onOpenPrivacyModal
               </li>
               <li className="flex items-center space-x-2">
                 <Shield className="w-3.5 h-3.5 text-sky-400" />
-                <span>Monitoramento Remoto no Celular</span>
+                <span>Monitoramento Remoto 24 Horas</span>
+              </li>
+              <li className="flex items-center space-x-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-sky-400"></span>
+                <span>Vigilância Presencial Permanente</span>
+              </li>
+              <li className="flex items-center space-x-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-sky-400"></span>
+                <span>Controlo de Acessos & Rondas</span>
               </li>
               <li className="flex items-center space-x-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-sky-400"></span>
@@ -98,14 +108,6 @@ export const Footer: React.FC<FooterProps> = ({ setActiveTab, onOpenPrivacyModal
               <li className="flex items-center space-x-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-sky-400"></span>
                 <span>Manutenção & Assistência Técnica</span>
-              </li>
-              <li className="flex items-center space-x-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-sky-400"></span>
-                <span>Segurança Residencial</span>
-              </li>
-              <li className="flex items-center space-x-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-sky-400"></span>
-                <span>Segurança Corporativa</span>
               </li>
             </ul>
           </div>
@@ -128,19 +130,34 @@ export const Footer: React.FC<FooterProps> = ({ setActiveTab, onOpenPrivacyModal
               </div>
 
               <div className="space-y-2">
-                <p className="text-[11px] text-slate-400">Siga e visite a nossa página oficial:</p>
-                <a
-                  href={COMPANY_INFO.facebookUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full flex items-center justify-between bg-blue-900/50 hover:bg-blue-800/80 text-white font-bold text-xs px-4 py-2.5 rounded-lg border border-blue-700/50 transition-all group"
-                >
-                  <div className="flex items-center space-x-2">
-                    <Facebook className="w-4 h-4 text-blue-300" />
-                    <span>{COMPANY_INFO.facebookButtonText}</span>
-                  </div>
-                  <ArrowUpRight className="w-4 h-4 text-blue-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                </a>
+                <p className="text-[11px] text-slate-400">Siga-nos nas redes sociais oficiais:</p>
+                <div className="space-y-2">
+                  <a
+                    href={COMPANY_INFO.facebookUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full flex items-center justify-between bg-blue-900/50 hover:bg-blue-800/80 text-white font-bold text-xs px-4 py-2.5 rounded-lg border border-blue-700/50 transition-all group"
+                  >
+                    <div className="flex items-center space-x-2">
+                      <Facebook className="w-4 h-4 text-blue-300" />
+                      <span>{COMPANY_INFO.facebookButtonText}</span>
+                    </div>
+                    <ArrowUpRight className="w-4 h-4 text-blue-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                  </a>
+
+                  <a
+                    href={COMPANY_INFO.instagramUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full flex items-center justify-between bg-pink-950/50 hover:bg-pink-900/80 text-white font-bold text-xs px-4 py-2.5 rounded-lg border border-pink-700/50 transition-all group"
+                  >
+                    <div className="flex items-center space-x-2">
+                      <Instagram className="w-4 h-4 text-pink-400" />
+                      <span>{COMPANY_INFO.instagramButtonText}</span>
+                    </div>
+                    <ArrowUpRight className="w-4 h-4 text-pink-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                  </a>
+                </div>
               </div>
 
               <a
